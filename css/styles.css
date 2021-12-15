@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(247, 236, 223);
+}
+.titulo {
+    font-size: 250%;
+    grid-area: titulo;
+    margin: 20px;
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "logo titulo navegacion";
+    background-color: white;
+}
+
+.logo {
+    margin: 20px;
+    border: solid 1px;
+    border-radius: 50%;
+    grid-area: logo;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 20px;
+    padding: 10px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    grid-area: navegacion;
+}
+
+.menu li a {
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.home {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    grid-area: home;
+}
+
+.parrafo {
+    padding: 20px;
+    margin: 20px;
+    grid-area: parrafo;
+}
+
+.imgIndex {
+    padding: 20px;
+    margin: 20px;
+    grid-area: imgIndex;
+    width:600px;
+}
+
+.contenidoIndex {
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "parrafo imgIndex"
+    ;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "ubicacion terminos redes";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ubicacion{
+    grid-area: ubicacion;
+}
+
+.terminos {
+    grid-area: terminos;
+}
+
+.redes {
+    grid-area: redes;
+}
+
+.sobreMi {
+    padding: 20px;
+    text-align: center;
+    grid-area: sobreMi;
+}
+
+.descripcion {
+    padding: 20px;
+    grid-area: descripcion;
+}
+
+.yo {
+    grid-area: yo;
+    width: 400px;
+    margin: 20px;
+
+}
+
+.fotocentrada {
+    display: flex;
+    justify-content: center;
+}
+
+.contenidoSobreMi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "descripcion yo"
+    ;
+}
+
+.misProyectos {
+    padding: 20px;
+    text-align: center;
+}
+
+.proyectos {
+    padding: 10px;
+    width: 500px;
+    opacity: 0.4;
+    margin: auto;
+}
+
+.proyectos:hover{
+    opacity: 1;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "baño1 baño2 restaurant1"
+    "restaurant2 restaurant3 tienda1"
+    ;
+    
+}
+
+.baño1 {
+    grid-area: baño1;
+}
+
+.baño2 {
+    grid-area: baño2;
+}
+
+.restaurant1 {
+    grid-area: restaurant1;
+}
+
+.restaurant2 {
+    grid-area: restaurant2;
+}
+
+.restaurant3 {
+    grid-area: restaurant3;
+}
+
+.tienda1 {
+    grid-area: tienda1;
+}
+
+
+.formulario {
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+    width: 35%;
+    grid-area: formulario;
+}
+
+.formulario fieldset div {
+    padding: 3px;
+}
+
+.bordeFormulario {
+    border-radius: 5%;
+}
+
+.contenidoFormulario {
+    display:grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    " "" formulario "" "
+    ;
+}
+
+
+@media (max-width:320px) {
+    .header {
+        height: 400px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "logo"
+        "titulo"
+        "navegacion"
+        ;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .footer {
+        height: 200px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "ubicacion"
+        "terminos"
+        "redes"
+        ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .titulo {
+        font-size: 150%;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 20px;;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(6 1fr);
+        grid-template-areas: 
+        "baño1"
+        "baño2"
+        "restaurant1"
+        "restaurant2"
+        "restaurant3"
+        "tienda1"
+        ;
+    }
+
+    .proyectos {
+        width: 280px;
+        margin: auto;
+    }
+
+    .contenidoIndex {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:  
+        "imgIndex"
+        "parrafo"
+        ;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .imgIndex {
+        width: 280px;
+        padding: 0;
+    }
+
+    .parrafo {
+        padding: 0;
+    }
+    
+    .contenidoFormulario {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-area: 
+        "formulario"
+        "formulario"
+        ;
+    }
+
+    .formulario {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .contenidoSobreMi {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "yo"
+        "descripcion"
+        ;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .yo {
+        width: 280px;
+    }
+
+}
+
+

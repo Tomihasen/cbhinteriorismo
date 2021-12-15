@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBH Contacto</title>
+    <link rel="shortcut icon" href="../media/favicon.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="../media/logo.png" alt="logo" width="100" height="100">
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="sobre-mi.html">Sobre mi</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1 class="titulo">CBH INTERIORISMO</h1>
+    </header>
+    <main>
+        <section class="contenidoFormulario">
+            <form class="formulario">
+                <fieldset class="bordeFormulario">
+                    <br>
+                    <div>
+                        <label for="nombre">Nombre: </label>
+                            <input type="text" name="nombre"></input>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="apellido">Apellido: </label>
+                            <input type="text" name="apellido"></input>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email">Email: </label>
+                            <input type="email" name="email" required> </input>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="pais">País de residencia </label>
+                            <select name="pais">
+                                <option value="Argentina">Argentina</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Peru">Perú</option>
+                            </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="consulta"></label> 
+                            <textarea name="consulta" cols="30" rows="5" placeholder="Dejá tu consulta"></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" value="Enviar consulta"></input>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="reset" value="Borrar datos"></input>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="ubicacion">Ubicación</p>
+        <p class="terminos">Términos y Condiciones</p>
+        <p class="redes">Redes sociales</p>
+    </footer>
+</body>
+</html>
