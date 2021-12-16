@@ -40,6 +40,8 @@ body {
     display: flex;
     flex-direction: row;
     grid-area: navegacion;
+    font-size: 100%;
+    transition: font-size 4s;
 }
 
 .menu li a {
@@ -47,8 +49,7 @@ body {
 }
 
 .menu li a:hover {
-    font-weight: bold;
-    font-size: 110%;
+    font-size: 150%
 }
 
 .home {
