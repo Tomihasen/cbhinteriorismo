@@ -44,12 +44,13 @@ body {
 
 .menu li a {
     text-decoration: none;
-    height: 100px;
-    transition: height 2s;
+    font-size: 100%;
+    transition: font-size 1s;
 }
 
 .menu li a:hover {
-    height: 500px;
+    font-size: 115%;
+    font-weight: bold;
 }
 
 .home {
