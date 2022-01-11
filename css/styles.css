@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body {
-    line-height: 1.6;
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(247, 236, 223);
 }
@@ -12,6 +11,8 @@ body {
     font-size: 250%;
     grid-area: titulo;
     margin: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .grosor {
@@ -32,7 +33,7 @@ body {
 
 .logo {
     margin: 20px;
-    border: solid 1px;
+    border: solid burlywood 1px;
     border-radius: 50%;
     grid-area: logo;
 }
@@ -41,7 +42,7 @@ body {
     list-style-type: none;
     margin: 20px;
     padding: 10px;
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
     flex-direction: row;
     grid-area: navegacion;
@@ -77,10 +78,13 @@ body {
     margin: 20px;
     grid-area: imgIndex;
     width:600px;
-    margin-bottom: 35px;
+    margin: 35px;
 }
 
 .contenidoIndex {
+    line-height: 2;
+    font-size: 200%;
+    text-align: justify;
     display: grid;
     grid-template-columns: repeat(2 1fr);
     grid-template-rows: 1fr;
@@ -97,19 +101,19 @@ body {
     grid-template-columns: repeat(3 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "ubicacion terminos redes";
+    "copyright contacto redes";
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
-.ubicacion{
-    grid-area: ubicacion;
+.copyright{
+    grid-area: copyright;
 }
 
-.terminos {
-    grid-area: terminos;
+.contacto {
+    grid-area: contacto;
 }
 
 .redes {
@@ -118,11 +122,14 @@ body {
 
 .sobreMi {
     padding: 20px;
+    margin: 10px;
     text-align: center;
     grid-area: sobreMi;
 }
 
 .descripcion {
+    line-height: 2;
+    text-align: justify;
     padding: 20px;
     grid-area: descripcion;
     margin: 20px;
@@ -130,8 +137,9 @@ body {
 
 .yo {
     grid-area: yo;
-    width: 400px;
-    margin: 20px;
+    width: 350px;
+    margin: 30px;
+    margin-bottom: 80px;
 
 }
 
@@ -152,6 +160,7 @@ body {
 
 .misProyectos {
     padding: 20px;
+    margin: 10px;
     text-align: center;
 }
 
@@ -166,13 +175,21 @@ body {
     opacity: 1;
 }
 
+.espacioGaleria {
+    height: 100vh;
+}
+
+.espacioForm {
+    height: 80vh;
+}
+
 .galeria {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "baño1 baño2 restaurant1"
-    "restaurant2 restaurant3 tienda1"
+    "baño1 restaurant1 tienda1"
+    "baño2 restaurant2 tienda2"
     ;
     
 }
@@ -201,10 +218,14 @@ body {
     grid-area: tienda1;
 }
 
+.tienda2 {
+    grid-area: tienda2;
+}
+
 .servicios {
     text-align: center;
+    padding: 20px;
     margin: 10px;
-    padding: 10px;
 }
 
 .otros {
@@ -243,7 +264,7 @@ body {
 }
 
 
-@media (max-width:320px) {
+@media (max-width:375px) {
     .header {
         height: 400px;
         grid-template-columns: 1fr;
@@ -262,8 +283,8 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
-        "ubicacion"
-        "terminos"
+        "copyright"
+        "contacto"
         "redes"
         ;
         display: flex;
@@ -288,17 +309,22 @@ body {
         "baño2"
         "restaurant1"
         "restaurant2"
-        "restaurant3"
         "tienda1"
+        "tienda2"
         ;
     }
 
+    .espacioGaleria {
+        height: 210vh;
+    }
+
     .proyectos {
-        width: 280px;
+        width: 330px;
         margin: auto;
     }
 
     .contenidoIndex {
+        text-align: center;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:  
@@ -307,12 +333,14 @@ body {
         ;
         display: flex;
         flex-direction: column-reverse;
+        font-size: 100;
+        margin-bottom: 100px;
     }
 
     .imgIndex {
-        width: 280px;
+        width: 320px;
         padding: 0;
-        margin-bottom: 0;
+        margin: 0;
     }
 
     .parrafo {
@@ -332,6 +360,10 @@ body {
         width: 100%;
         margin: auto;
     }
+
+    .espacioForm {
+        height: 110vh;
+    }
     
     .contenidoSobreMi {
         grid-template-columns: 1fr;
@@ -343,10 +375,146 @@ body {
         display: flex;
         flex-direction: column-reverse;
     }
-    .yo {
-        width: 280px;
+    .descripcion {
+        margin-bottom: 100px;
     }
 
+    .yo {
+        width: 280px;
+        margin-bottom: 0;
+    }
+
+    .otros {
+        line-height: 2;
+        text-align: center;
+    }
+
+}
+
+@media (min-width:375px) and (max-width:768px) {
+    .header {
+        height: 400px;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "logo navegacion"
+        "titulo titulo"
+        ;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .footer {
+        height: 200px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "copyright"
+        "contacto"
+        "redes"
+        ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .titulo {
+        font-size: 300%;
+    }
+
+    .menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .menu li {
+        padding: 10px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(3 1fr);
+        grid-template-areas: 
+        "baño1 baño2"
+        "restaurant1 restaurant2"
+        "tienda1 tienda2"
+        ;
+    }
+
+    .espacioGaleria {
+        height: 120vh;
+    }
+    .proyectos {
+        width: 330px;
+        margin: auto;
+    }
+
+    .contenidoIndex {
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:  
+        "imgIndex"
+        "parrafo"
+        ;
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 100;
+        margin-bottom: 100px;
+    }
+
+    .imgIndex {
+        width: 500px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .parrafo {
+        padding: 0;
+    }
+    
+    .contenidoFormulario {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-area: 
+        "formulario"
+        "formulario"
+        ;
+    }
+
+    .formulario {
+        width: 100%;
+        margin: auto;
+    }
+
+    .espacioForm {
+        height: 110vh;
+    }
+    
+    .contenidoSobreMi {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "yo"
+        "descripcion"
+        ;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .descripcion {
+        margin-bottom: 100px;
+    }
+    .yo {
+        width: 550px;
+        margin-bottom: 0;
+    }
+
+    .otros {
+        line-height: 2;
+        text-align: center;
+    }
 }
 
 
