@@ -1,520 +1,281 @@
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(247, 236, 223);
-}
-.titulo {
-    font-size: 250%;
-    grid-area: titulo;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f7ecdf; }
+
+header .nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo navegacion";
+  background-color: white; }
+  header .nav .logo {
+    width: 100px;
+    height: 100px;
     margin: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.grosor {
-    font-weight: bold;
-}
-
-
-.header {
-    width: 100%;
-    height: 150px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "logo titulo navegacion";
-    background-color: white;
-}
-
-.logo {
-    margin: 20px;
-    border: solid burlywood 1px;
     border-radius: 50%;
-    grid-area: logo;
-}
-
-.menu {
+    grid-area: logo; }
+  header .nav .menu {
     list-style-type: none;
     margin: 20px;
-    padding: 10px;
-    justify-content: space-around;
+    padding: 20px;
+    justify-content: space-evenly;
     display: flex;
     flex-direction: row;
-    grid-area: navegacion;
-}
+    grid-area: navegacion; }
+    header .nav .menu li a {
+      text-decoration: none;
+      font-size: 100%;
+      transition: font-size 1s;
+      color: black; }
+      header .nav .menu li a:hover {
+        font-size: 115%;
+        font-weight: bold; }
 
-.menu li a {
-    text-decoration: none;
-    font-size: 100%;
-    transition: font-size 1s;
-    color: black;
-}
-
-.menu li a:hover {
-    font-size: 115%;
-    font-weight: bold;
-}
-
-.home {
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    grid-area: home;
-}
-
-.parrafo {
+.contenidoIndex {
+  line-height: 2;
+  font-size: 200%;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "titulo titulo" "parrafo imgIndex"; }
+  .contenidoIndex .titulo {
+    font-size: 150%;
+    grid-area: titulo;
+    margin: 20px;
+    padding: 10px;
+    text-align: center; }
+  .contenidoIndex .section1 .parrafo {
     padding: 20px;
     margin: 20px;
-    grid-area: parrafo;
-}
-
-.imgIndex {
+    grid-area: parrafo; }
+  .contenidoIndex .section2 .imgIndex {
     padding: 20px;
     margin: 20px;
     grid-area: imgIndex;
-    width:600px;
-    margin: 35px;
-}
+    width: 600px;
+    margin: 35px; }
 
-.contenidoIndex {
-    line-height: 2;
-    font-size: 200%;
-    text-align: justify;
-    display: grid;
-    grid-template-columns: repeat(2 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "parrafo imgIndex"
-    ;
-}
-
-.footer {
-    width: 100%;
-    height: 75px;
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(3 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "copyright contacto redes";
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.copyright{
-    grid-area: copyright;
-}
-
-.contacto {
-    grid-area: contacto;
-}
-
-.redes {
-    grid-area: redes;
-}
-
-.sobreMi {
+.espacioGaleria {
+  height: 100vh; }
+  .espacioGaleria .misProyectos {
     padding: 20px;
     margin: 10px;
     text-align: center;
-    grid-area: sobreMi;
-}
+    grid-area: misProyectos; }
+  .espacioGaleria .galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "baño1 restaurant1 tienda1" "baño2 restaurant2 tienda2"; }
+    .espacioGaleria .galeria .proyectos {
+      padding: 10px;
+      width: 500px;
+      opacity: 0.4;
+      margin: auto; }
+      .espacioGaleria .galeria .proyectos:hover {
+        opacity: 1; }
+    .espacioGaleria .galeria .baño1 {
+      grid-area: baño1; }
+    .espacioGaleria .galeria .baño2 {
+      grid-area: baño2; }
+    .espacioGaleria .galeria .restaurant1 {
+      grid-area: restaurant1; }
+    .espacioGaleria .galeria .restaurant2 {
+      grid-area: restaurant2; }
+    .espacioGaleria .galeria .restaurant3 {
+      grid-area: restaurant3; }
+    .espacioGaleria .galeria .tienda1 {
+      grid-area: tienda1; }
+    .espacioGaleria .galeria .tienda2 {
+      grid-area: tienda2; }
 
-.descripcion {
+.mainServicios .otrosProyectos {
+  text-align: center;
+  margin: 30px; }
+
+.mainServicios .grosor {
+  font-weight: bold; }
+
+.mainServicios .otros {
+  margin: 20px;
+  padding: 10px; }
+
+.contenidoSobreMi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "sobreMi sobreMi" "descripcion yo"; }
+  .contenidoSobreMi .sobreMi {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    grid-area: sobreMi; }
+  .contenidoSobreMi .section3 .descripcion {
     line-height: 2;
     text-align: justify;
     padding: 20px;
     grid-area: descripcion;
-    margin: 20px;
-}
-
-.yo {
-    grid-area: yo;
-    width: 350px;
-    margin: 30px;
-    margin-bottom: 80px;
-
-}
-
-.fotocentrada {
+    margin: 20px; }
+  .contenidoSobreMi .fotocentrada {
     display: flex;
-    justify-content: center;
-}
-
-.contenidoSobreMi {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "descripcion yo"
-    ;
-}
-
-
-.misProyectos {
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-}
-
-.proyectos {
-    padding: 10px;
-    width: 500px;
-    opacity: 0.4;
-    margin: auto;
-}
-
-.proyectos:hover{
-    opacity: 1;
-}
-
-.espacioGaleria {
-    height: 100vh;
-}
+    justify-content: center; }
+    .contenidoSobreMi .fotocentrada .yo {
+      grid-area: yo;
+      width: 350px;
+      margin: 30px;
+      margin-bottom: 80px; }
 
 .espacioForm {
-    height: 80vh;
-}
-
-.galeria {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "baño1 restaurant1 tienda1"
-    "baño2 restaurant2 tienda2"
-    ;
-    
-}
-
-.baño1 {
-    grid-area: baño1;
-}
-
-.baño2 {
-    grid-area: baño2;
-}
-
-.restaurant1 {
-    grid-area: restaurant1;
-}
-
-.restaurant2 {
-    grid-area: restaurant2;
-}
-
-.restaurant3 {
-    grid-area: restaurant3;
-}
-
-.tienda1 {
-    grid-area: tienda1;
-}
-
-.tienda2 {
-    grid-area: tienda2;
-}
-
-.servicios {
-    text-align: center;
+  height: 100vh; }
+  .espacioForm .consulta {
     padding: 20px;
     margin: 10px;
-}
+    text-align: center; }
+  .espacioForm .grosor {
+    font-weight: bold; }
 
-.otros {
-    margin: 20px;
-    padding: 10px;
-}
+.footer {
+  width: 100%;
+  height: 75px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "copyright contacto redes";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .footer .copyright {
+    grid-area: copyright; }
+  .footer .contacto {
+    grid-area: contacto; }
+  .footer .redes {
+    grid-area: redes; }
 
-.otrosProyectos {
+@media (max-width: 375px) {
+  header .nav {
+    height: 330px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "logo" "navegacion";
+    justify-items: center; }
+    header .nav .menu {
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+  .contenidoIndex {
     text-align: center;
-    margin: 20px;
-    font-size: 150%;
-}
-.formulario {
-    margin: 30px;
-    padding: 30px;
-    text-align: center;
-    width: 35%;
-    grid-area: formulario;
-}
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "titulo"  "imgIndex" "parrafo"; }
+    .contenidoIndex .titulo {
+      font-size: 100%; }
+    .contenidoIndex .section1 .parrafo {
+      padding: 0;
+      text-align: justify;
+      font-size: 80%;
+      margin-bottom: 50px; }
+    .contenidoIndex .section2 .imgIndex {
+      width: 320px;
+      padding: 0;
+      margin: 0; }
+  .footer {
+    height: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "copyright" "contacto" "redes";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center; }
+  .espacioGaleria {
+    height: 225vh; }
+    .espacioGaleria .galeria {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6 1fr);
+      grid-template-areas: "baño1" "baño2" "restaurant1" "restaurant2" "tienda1" "tienda2"; }
+      .espacioGaleria .galeria .proyectos {
+        width: 330px;
+        margin: auto; }
+  .mainServicios .otros .otros {
+    line-height: 2;
+    text-align: justify; }
+  .contenidoSobreMi {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "sobreMi" "yo" "descripcion"; }
+    .contenidoSobreMi .fotocentrada .yo {
+      width: 280px; }
+  .espacioForm {
+    height: 150vh; } }
 
-.formulario fieldset div {
-    padding: 3px;
-}
-
-.bordeFormulario {
-    border-radius: 5%;
-}
-
-.contenidoFormulario {
-    display:grid;
-    grid-template-columns: repeat(3 1fr);
+@media (min-width: 375px) and (max-width: 768px) {
+  header .nav {
+    height: 200px;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr;
-    grid-template-areas: 
-    " "" formulario "" "
-    ;
-}
-
-
-@media (max-width:375px) {
-    .header {
-        height: 400px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "logo"
-        "titulo"
-        "navegacion"
-        ;
-        align-items: center;
-        justify-items: center;
-    }
-
-    .footer {
-        height: 200px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "copyright"
-        "contacto"
-        "redes"
-        ;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-    }
-
-    .titulo {
-        font-size: 150%;
-    }
-
-    .menu {
-        flex-direction: column;
-    }
-
-    .galeria {
-        grid-template-columns: 1fr ;
-        grid-template-rows: repeat(6 1fr);
-        grid-template-areas: 
-        "baño1"
-        "baño2"
-        "restaurant1"
-        "restaurant2"
-        "tienda1"
-        "tienda2"
-        ;
-    }
-
-    .espacioGaleria {
-        height: 210vh;
-    }
-
-    .proyectos {
-        width: 330px;
-        margin: auto;
-    }
-
-    .contenidoIndex {
-        text-align: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:  
-        "imgIndex"
-        "parrafo"
-        ;
-        display: flex;
-        flex-direction: column-reverse;
-        font-size: 100;
-        margin-bottom: 100px;
-    }
-
-    .imgIndex {
-        width: 320px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .parrafo {
-        padding: 0;
-    }
-    
-    .contenidoFormulario {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-area: 
-        "formulario"
-        "formulario"
-        ;
-    }
-
-    .formulario {
-        width: 100%;
-        margin: auto;
-    }
-
-    .espacioForm {
-        height: 110vh;
-    }
-    
-    .contenidoSobreMi {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "yo"
-        "descripcion"
-        ;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .descripcion {
-        margin-bottom: 100px;
-    }
-
-    .yo {
-        width: 280px;
-        margin-bottom: 0;
-    }
-
-    .otros {
-        line-height: 2;
-        text-align: center;
-    }
-
-}
-
-@media (min-width:375px) and (max-width:768px) {
-    .header {
-        height: 400px;
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "logo navegacion"
-        "titulo titulo"
-        ;
-        align-items: center;
-        justify-items: center;
-    }
-
-    .footer {
-        height: 200px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "copyright"
-        "contacto"
-        "redes"
-        ;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-    }
-
-    .titulo {
-        font-size: 300%;
-    }
-
-    .menu {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    .menu li {
-        padding: 10px;
-    }
-
-    .galeria {
-        grid-template-columns: 1fr ;
-        grid-template-rows: repeat(3 1fr);
-        grid-template-areas: 
-        "baño1 baño2"
-        "restaurant1 restaurant2"
-        "tienda1 tienda2"
-        ;
-    }
-
-    .espacioGaleria {
-        height: 120vh;
-    }
-    .proyectos {
-        width: 330px;
-        margin: auto;
-    }
-
-    .contenidoIndex {
-        text-align: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:  
-        "imgIndex"
-        "parrafo"
-        ;
-        display: flex;
-        flex-direction: column-reverse;
-        font-size: 100;
-        margin-bottom: 100px;
-    }
-
-    .imgIndex {
-        width: 500px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .parrafo {
-        padding: 0;
-    }
-    
-    .contenidoFormulario {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-area: 
-        "formulario"
-        "formulario"
-        ;
-    }
-
-    .formulario {
-        width: 100%;
-        margin: auto;
-    }
-
-    .espacioForm {
-        height: 110vh;
-    }
-    
-    .contenidoSobreMi {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "yo"
-        "descripcion"
-        ;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .descripcion {
-        margin-bottom: 100px;
-    }
-    .yo {
-        width: 550px;
-        margin-bottom: 0;
-    }
-
-    .otros {
-        line-height: 2;
-        text-align: center;
-    }
-}
-
-
+    grid-template-areas: "logo navegacion";
+    align-items: center;
+    justify-items: center; }
+    header .nav .menu {
+      flex-direction: row;
+      justify-content: space-evenly; }
+      header .nav .menu li {
+        padding: 10px; }
+  .contenidoIndex {
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "titulo" "imgIndex" "parrafo";
+    font-size: 100;
+    margin-bottom: 100px; }
+    .contenidoIndex .titulo {
+      font-size: 150%; }
+    .contenidoIndex .section1 .parrafo {
+      padding: 0;
+      text-align: justify;
+      font-size: 90%; }
+    .contenidoIndex .section2 .imgIndex {
+      width: 600px;
+      padding: 0;
+      margin: 0; }
+  .footer {
+    height: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "copyright" "contacto" "redes";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center; }
+  .espacioGaleria {
+    height: 130vh; }
+    .espacioGaleria .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3 1fr);
+      grid-template-areas: "baño1 baño2" "restaurant1 restaurant2" "tienda1 tienda2"; }
+      .espacioGaleria .galeria .proyectos {
+        width: 360px;
+        margin: auto; }
+  .mainServicios .otros {
+    line-height: 2;
+    text-align: justify; }
+  .contenidoSobreMi {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "sobreMi" "yo" "descripcion"; }
+    .contenidoSobreMi .fotocentrada .yo {
+      width: 550px;
+      margin-bottom: 100px; }
+  .espacioForm {
+    height: 120vh; } }

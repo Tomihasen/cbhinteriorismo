@@ -1,0 +1,45 @@
+header {
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "logo navegacion";
+        background-color: $color1;
+        .logo {
+            width: 100px; 
+            height: 100px;
+            margin: 20px;
+            border-radius: 50%;
+            grid-area: logo;
+        }
+        .menu {
+            list-style-type: none;
+            margin: 20px;
+            padding: 20px;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: row;
+            grid-area: navegacion;
+        
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 100%;
+                    transition: font-size 1s;
+                    color: black;
+                    &:hover {
+                        font-size: 115%;
+                        font-weight: bold;
+                        }
+                }
+            } 
+        }
+    }
+}
+
+
+
+
+
+
