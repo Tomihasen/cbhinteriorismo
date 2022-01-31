@@ -1,2 +1,7 @@
 $bg-color: rgb(247, 236, 223);
 $color1: white;
+
+@mixin header_footer ($color) {
+    background-color: $color1;
+}
+

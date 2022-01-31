@@ -5,7 +5,7 @@ header {
         grid-template-rows: 1fr;
         grid-template-areas: 
         "logo navegacion";
-        background-color: $color1;
+        @include header_footer ($color1);
         .logo {
             width: 100px; 
             height: 100px;

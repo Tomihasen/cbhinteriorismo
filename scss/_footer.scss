@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     height: 75px;
-    background-color: $color1;
+    @include header_footer ($color1);
     display: grid;
     grid-template-columns: repeat(3 1fr);
     grid-template-rows: 1fr;
@@ -17,8 +17,16 @@
     .contacto {
         grid-area: contacto;
     }
-    .redes {
-        grid-area: redes;
+
+    a{
+        .redes {
+            grid-area: redes;
+            width: 40px;
+            transition: width 1s;
+            &:hover {
+                width: 50px;
+            }
+        }
     }
 }
 

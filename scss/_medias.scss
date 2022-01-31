@@ -62,7 +62,7 @@
     }
 
     .espacioGaleria {
-        height: 225vh;
+        height: 125vh;
             .galeria {
                 grid-template-columns: 1fr ;
                 grid-template-rows: repeat(6 1fr);
@@ -110,7 +110,7 @@
     }
 
     .espacioForm {
-        height: 150vh;
+        height: 80vh;
     }
 }
 
@@ -186,7 +186,7 @@
     }
 
     .espacioGaleria {
-        height: 130vh;
+        height: 75vh;
 
         .galeria {
             display: flex;
@@ -231,7 +231,7 @@
     }
 
     .espacioForm {
-        height: 120vh;
+        height: 70vh;
     }
 }
 
